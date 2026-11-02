@@ -15,8 +15,14 @@ console.log(typeof exampleName);     // typeof tells you the type
 
 // TODO: Make 3 variables for YOUR truck: a name, a number, and a true/false.
 // TODO: console.log them, and log the typeof each one.
+const myTruckName = "Perfect Patties";
+const menuCount = 3;
+const myTruckIsOpen = true;
 
-
+console.log(myTruckName, menuCount, myTruckIsOpen);
+console.log(typeof myTruckName);
+console.log(typeof menuCount);
+console.log(typeof myTruckIsOpen);
 // ---------- Step 2: An array (a list) ----------
 // Example:
 const exampleMenu = ["taco", "burrito", "nachos"];
