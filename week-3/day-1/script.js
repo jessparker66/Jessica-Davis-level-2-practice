@@ -17,12 +17,12 @@ console.log(typeof exampleName);     // typeof tells you the type
 // TODO: console.log them, and log the typeof each one.
 const myTruckName = "Perfect Patties";
 const menuCount = 3;
-const myTruckIsOpen = true;
+const isOpen = true;
 
-console.log(myTruckName, menuCount, myTruckIsOpen);
+console.log(myTruckName, menuCount, isOpen);
 console.log(typeof myTruckName);
 console.log(typeof menuCount);
-console.log(typeof myTruckIsOpen);
+console.log(typeof isOpen);
 // ---------- Step 2: An array (a list) ----------
 // Example:
 const exampleMenu = ["taco", "burrito", "nachos"];
