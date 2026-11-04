@@ -5,18 +5,13 @@
 // ---------- Step 1: Variables ----------
 // Example:
 // Create 3 variables using "let" or "const"
-const exampleName = "Taco Rocket";   // string (text)
-const exampleYears = 3;              // number
-const exampleIsOpen = true;          // boolean (true or false)
-
 // Log variables
-console.log(exampleName, exampleYears, exampleIsOpen);
-console.log(typeof exampleName);     // typeof tells you the type
+
 
 // TODO: Make 3 variables for YOUR truck: a name, a number, and a true/false.
 // TODO: console.log them, and log the typeof each one.
 const myTruckName = "Perfect Patties";
-const menuCount = 3;
+const menuCount = 4;
 const isOpen = true;
 
 console.log(myTruckName, menuCount, isOpen);
@@ -25,22 +20,17 @@ console.log(typeof menuCount);
 console.log(typeof isOpen);
 // ---------- Step 2: An array (a list) ----------
 // Example:
-const exampleMenu = ["taco", "burrito", "nachos"];
-console.log(exampleMenu[0]);         // first item: index 0
-console.log(exampleMenu.length);     // how many items
+
 
 // TODO: Make an array of 3 or more things YOUR truck sells.
 // TODO: Log the first item, the last item, and how many items there are.
-const myMenu = ["Savory Patty", "Vegan Patty", "Dessert Patty"];
+const myMenu = ["Savory Patty", "Vegan Patty", "Dessert Patty", "Special Patty"];
 console.log(myMenu[0]);         // Savory Patty
-console.log(myMenu[myMenu.length - 1]); // Dessert Patty
-console.log(myMenu.length);     // 3
+console.log(myMenu[myMenu.length - 1]); // Special Patty
+console.log(myMenu.length);     // 4
 
 // ---------- Step 3: An object (one thing with details) ----------
 // Example:
-const exampleItem = { name: "taco", price: 4.5, spicy: true };
-console.log(exampleItem.name);       // dot notation
-console.log(exampleItem["price"]);   // bracket notation
 
 // TODO: Make an object for one of YOUR menu items (name, price, spicy).
 // TODO: Log one property with dot notation and one with bracket notation.
@@ -55,6 +45,10 @@ console.log(item2["price"]);   // bracket notation
 const item3 = { name: "Dessert Patty", price: 4, spicy: false };
 console.log(item3.name);       // dot notation
 console.log(item3["price"]);   // bracket notation
+
+const item4 = { name: "Special Patty", price: 7, spicy: true };
+console.log(item4.name);       // dot notation
+console.log(item4["price"]);   // bracket notation
 
 // ---------- Step 4: A function ----------
 // Example:
@@ -92,3 +86,34 @@ const myTruck = {
 
 console.log(myTruck.describe());
 
+const itemText = '{"name": "Savory Patty", "price": 6.5, "spicy": false }';
+const item = JSON.parse(itemText);
+console.log(item.name);       // dot notation
+console.log(item["price"]);   // bracket notation
+
+const itemText2 = '{"name": "Vegan Patty", "price": 5, "spicy": false }';
+const item2 = JSON.parse(itemText2);
+console.log(item2.name);       // dot notation
+console.log(item2["price"]);   // bracket notation
+
+const itemText3 = '{"name": "Dessert Patty", "price": 4, "spicy": false }';
+const item3 = JSON.parse(itemText3);
+console.log(item3.name);       // dot notation
+console.log(item3["price"]);   // bracket notation
+
+const itemText4 = '{"name": "Special Patty", "price": 7, "spicy": true }';
+const item4 = JSON.parse(itemText4);
+console.log(item4.name);       // dot notation
+console.log(item4["price"]);   // bracket notation
+
+const backToText = JSON.stringify(item);
+console.log(backToText, typeof backToText);
+
+const backToText2 = JSON.stringify(item2);
+console.log(backToText2, typeof backToText2);
+
+const backToText3 = JSON.stringify(item3);
+console.log(backToText3, typeof backToText3);
+
+const backToText4 = JSON.stringify(item4);
+console.log(backToText4, typeof backToText4);
