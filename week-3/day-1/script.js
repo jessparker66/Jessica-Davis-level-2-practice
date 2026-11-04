@@ -48,6 +48,13 @@ const item = { name: "Savory Patty", price: 6.5, spicy: false };
 console.log(item.name);       // dot notation
 console.log(item["price"]);   // bracket notation
 
+const item2 = { name: "Vegan Patty", price: 5, spicy: false };
+console.log(item2.name);       // dot notation
+console.log(item2["price"]);   // bracket notation
+
+const item3 = { name: "Dessert Patty", price: 4, spicy: false };
+console.log(item3.name);       // dot notation
+console.log(item3["price"]);   // bracket notation
 
 // ---------- Step 4: A function ----------
 // Example:
@@ -75,3 +82,13 @@ function isCheap(price) {
 }
 console.log(isCheap(3));
 console.log(isCheap(8));
+
+const myTruck = { 
+  name: "Perfect Patties",
+  describe: function() {
+    return "Welcome to " + this.name + "!";
+  }
+};
+
+console.log(myTruck.describe());
+
