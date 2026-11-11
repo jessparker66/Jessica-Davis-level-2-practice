@@ -9,9 +9,10 @@
 
 // First: replace this menu with YOUR truck's menu (keep the same shape).
 const menu = [
-  { name: "Taco", price: 4.5 },
-  { name: "Burrito", price: 9 },
-  { name: "Nachos", price: 6.25 },
+  { name: "Savory Patty", price: 3.50 },
+  { name: "Vegan Patty", price: 4.00 },
+  { name: "Spicy Patty", price: 5.00 },
+  { name: "Sweet Patty", price: 5.50 },
 ];
 
 // getElementById finds ONE element by its id. Same job as querySelector("#card-area"),
@@ -28,6 +29,10 @@ area.appendChild(card);                        // 4. put it inside #card-area. N
 
 // YOUR TURN: make a second card that says your truck's name.
 // Change: card → card2 (4 places), and the text.
+const card2 = document.createElement("div");
+card2.className = "card p-3";
+card2.textContent = "Perfect Patties";
+area.appendChild(card2);
 
 
 // ---------- Step 2: A card for EVERY item ----------
@@ -42,6 +47,12 @@ menu.forEach(function (item) {
 // YOUR TURN: don't copy this one. Change the example above,
 // so each card shows the name AND the price, like "Taco: $4.5".
 // Change: item.name → item.name + ": $" + item.price
+menu.forEach(function (item) {
+  const itemCard = document.createElement("div");
+  itemCard.className = "card p-3 text-center shadow-sm";
+  itemCard.textContent = item.name + ": $" + item.price.toFixed(2);
+  area.appendChild(itemCard);
+});
 
 
 // ---------- Step 3: Dress up the cards ----------
