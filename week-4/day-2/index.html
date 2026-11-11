@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week 4 Day 2 — Flex Layouts + createElement</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+    .bg-truck {
+      background-color: #7a1f1f;
+    }
+    .btn-truck {
+      --bs-btn-bg: #f4a300;
+      --bs-btn-border-color: #f4a300;
+      --bs-btn-hover-bg: #c98600;
+      --bs-btn-color: #1a1a1a;
+      --bs-btn-hover-border-color: #c98600;
+      --bs-btn-hover-color: #1a1a1a;
+    }
+  </style>
 </head>
 <body>
   <main class="container py-4">
@@ -20,10 +33,11 @@
     <!-- ========== Layout 1: stack on phones, a row on bigger screens ========== -->
     <h2 class="mt-5">Layout 1: How to order</h2>
     <!-- TODO: give the div below these classes: d-flex flex-column flex-md-row gap-3 -->
-    <div class="">
-      <div class="p-4 bg-primary text-white">1. Order</div>
-      <div class="p-4 bg-success text-white">2. Pay</div>
-      <div class="p-4 bg-warning">3. Eat</div>
+    <div class="d-flex flex-column flex-md-row gap-3">
+      <div class="p-4 bg-primary text-white">1. Pick your patty</div>
+      <div class="p-4 bg-success text-white">2. Choose your protein</div>
+      <div class="p-4 bg-warning">3. Add optional veggies or sauces</div>
+      <div class="p-4 bg-danger text-white">4. Grab it made to order and pay</div>
     </div>
     <!-- TODO: change the three steps to fit YOUR truck. -->
 
@@ -34,14 +48,18 @@
          both lined up in the middle (top to bottom).
          Classes you'll need: d-flex  justify-content-between  align-items-center
          Give it a background and padding so you can see it: bg-dark text-white p-3 -->
-
+    <div class="d-flex justify-content-between align-items-center bg-truck text-white p-3">
+      <span class="fw-bold">Perfect Patties</span>
+      <a href="#" class="btn btn-truck">Order Now</a>
+    </div>
 
 
     <!-- ========== Compare ========== -->
     <h2 class="mt-5">Framework vs plain CSS</h2>
     <!-- TODO: write 1–2 sentences: what was easier with Bootstrap classes?
+     
          What would you have written in style.css instead? -->
-    <p></p>
+    <p>Bootstrap classes made the layouts easier because I could add spacing, colors, and alignment without writing custom CSS. In style.css, I would have needed rules for display: flex, flex-direction, gap, justify-content, and align-items.</p>
   </main>
 
   <script src="script.js"></script>
